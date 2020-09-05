@@ -13,14 +13,6 @@ function JsonObjectToArray(obj){
     });
 }
 
-window.addEventListener('orientationchange', function ()
-{
-    if (window.innerHeight > window.innerWidth)
-    {
-        document.getElementsByTagName('body')[0].style.transform = "rotate(90deg)";
-    }
-});
-
 
 var local = getUrlParameter('location');
 
@@ -109,7 +101,7 @@ class Products {
 class CallUsNowButton{
     template(){
         return `
-            <button class="btn btn-danger p-2" href="tel:{{phone}}">CALL US NOW</button>
+            <a class="btn btn-danger p-5 chk-btn" href="tel:{{phone}}">CALL US NOW</a>
         `;
     }
 }
@@ -134,6 +126,9 @@ function init(){
     console.log(JsonObjectToArray(data.locations));
     console.log(new Locations().template());
     RenderDOM('locations-display',Locations, { locations : JsonObjectToArray( data.locations) });
+
+    // init complete 
+    document.getElementById('loading').classList.add("complete");
 
 }
 
