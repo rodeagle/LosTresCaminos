@@ -101,7 +101,7 @@ class Products {
 class CallUsNowButton{
     template(){
         return `
-            <a class="btn btn-danger p-5 p-md-1 p-lg-5 chk-btn" href="tel:{{phone}}">CALL US NOW</a>
+            <a class="btn btn-danger bt-block p-3 p-md-3 p-lg-5 chk-btn" href="tel:{{phone}}">CALL US NOW</a>
         `;
     }
 }
@@ -111,6 +111,14 @@ function RenderDOM(id,element,data){
     let template = Handlebars.compile(html);
     let result = template(data);
     document.getElementById(id).innerHTML = result;
+}
+
+function Responsive() {
+    $('#close-mobile-menu-btn').click(function () {
+        console.log($(this).parents('.mobile-menu-content'));
+        $('.mobile-menu-content').removeClass('active');
+        $('.backdrop-background-mobile').removeClass('active');
+    });
 }
 
 function init(){
@@ -130,6 +138,7 @@ function init(){
     // init complete 
     document.getElementById('loading').classList.add("complete");
 
+    Responsive();
 }
 
 document.addEventListener( "DOMContentLoaded", init);
