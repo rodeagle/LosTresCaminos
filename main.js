@@ -67,7 +67,7 @@ class Products {
     template(){
         return `
         {{#each items}}
-            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-3 product" style="position:relative">
+            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4 col-xl-3 product" style="position:relative">
                 <img class="" style="object-fit: fill"  width="100%" height="100%" src="{{img-path}}">
                 <div class="info-container" style="display:grid;grid-template-columns:auto;grid-template-rows:7vh 20vh 6vh; position:absolute;z-index:10;top:0;left:0;">
                     <div style="grid-column: 1/2;">
@@ -101,7 +101,7 @@ class Products {
 class CallUsNowButton{
     template(){
         return `
-            <a class="btn btn-danger p-5 chk-btn" href="tel:{{phone}}">CALL US NOW</a>
+            <a class="btn btn-danger p-5 p-md-1 p-lg-5 chk-btn" href="tel:{{phone}}">CALL US NOW</a>
         `;
     }
 }

@@ -219,9 +219,9 @@ color: initial;
         font-size:6vh;
 } 
 
-@media (orientation: landscape){
+@media (orientation: landscape) and (-width:1999px){
     .potrait-only{
         color:black;
-        background-color: white;
+        background-color: white;max
     }      
 }
