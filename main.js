@@ -115,7 +115,14 @@ function RenderDOM(id,element,data){
 
 function Responsive() {
     $('#close-mobile-menu-btn').click(function () {
-        console.log($(this).parents('.mobile-menu-content'));
+        $('.mobile-menu-content').removeClass('active');
+        $('.backdrop-background-mobile').removeClass('active');
+    });
+    $('#open-mobile-menu-btn').click(function () {
+        $('.mobile-menu-content').addClass('active');
+        $('.backdrop-background-mobile').addClass('active');
+    });
+    $('.backdrop-background-mobile').click(function () {
         $('.mobile-menu-content').removeClass('active');
         $('.backdrop-background-mobile').removeClass('active');
     });

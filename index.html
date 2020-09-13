@@ -2,110 +2,55 @@
 
 <html lang="en">
 <head>
-  <meta charset="utf-8">
+    <meta charset="utf-8">
 
-  <title>Los Tres Caminos</title>
-  <meta name="description" content="Los Tres Caminos authentic mexican food">
-  <meta name="author" content="SitePoint">
-  <meta http-equiv="ScreenOrientation" content="autoRotate:disabled">
+    <!-- Primary Meta Tags -->
+    <title>Los Tres Caminos</title>
+    <meta name="title" content="Los Tres Caminos">
+    <meta name="description" content="House to the most Authentic Mexican plates, come taste a variety of dishes and have a great time with your family. Bienvenidos.">
+    <meta name="image" content="ltc_logo.png">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://los3caminos.com/">
+    <meta property="og:title" content="Los Tres Caminos">
+    <meta property="og:description" content="House to the most Authentic Mexican plates, come taste a variety of dishes and have a great time with your family. Bienvenidos.">
+    <meta property="og:image" content="ltc_logo.png">
 
-  <!-- <link rel="stylesheet" href="css/styles.css?v=1.0"> -->
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://los3caminos.com/">
+    <meta property="twitter:title" content="Los Tres Caminos">
+    <meta property="twitter:description" content="House to the most Authentic Mexican plates, come taste a variety of dishes and have a great time with your family. Bienvenidos.">
+    <meta property="twitter:image" content="ltc_logo.png">
+
+    <!--favicon-->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <!-- <link rel="stylesheet" href="css/styles.css?v=1.0"> -->
+    <!-- css and javascript -->
+    <link rel="stylesheet" href="style.css">
+    <script src="data.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+    <!-- boostrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <!-- material icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <!-- handlebars -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.6/handlebars.min.js" integrity="sha512-zT3zHcFYbQwjHdKjCu6OMmETx8fJA9S7E6W7kBeFxultf75OPTYUJigEKX58qgyQMi1m1EgenfjMXlRZG8BXaw==" crossorigin="anonymous"></script>
+    <!-- main  -->
+    <script src="main.js"></script>
+
+    <style>
+        #content{
+            scroll-behavior: smooth; 
+        }
+    </style>
 
 </head>
-
-<!-- css and javascript -->
-<link rel="stylesheet" href="style.css">
-<script src="data.js"></script>
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
-<!-- boostrap -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-<!-- material icons -->
-<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-<!-- handlebars -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.6/handlebars.min.js" integrity="sha512-zT3zHcFYbQwjHdKjCu6OMmETx8fJA9S7E6W7kBeFxultf75OPTYUJigEKX58qgyQMi1m1EgenfjMXlRZG8BXaw==" crossorigin="anonymous"></script>
-<!-- main  -->
-<script src="main.js"></script>
-
-
-<style>
-    .backdrop-background-mobile{
-        background-color:transparent;
-        pointer-events: none;
-        position:fixed;
-        top:0;
-        left:0;
-        width:100%;
-        height:100%;
-        z-index:100;
-        transition:background-color 0.2s linear;
-    }
-
-    .backdrop-background-mobile.active{
-         background-color:rgba(0, 0, 0, 0.5);
-    }
-
-    .mobile-bar{
-        background-color:rgb(201, 30, 0);
-        height:12vh;
-        z-index:99;
-        position:fixed;
-        top:0;
-        left:0;
-        box-shadow: black 0px 3px 30px 2px;
-    }
-
-    .mobile-menu-content{
-        height:100vh;
-        background-color:rgb(201, 30, 0);
-        position:fixed;
-        z-index:101;
-        width:100%;
-        height:100%;
-        top:0;
-        left:0;
-        font-size:2.5vh;
-    }
-
-    .mobile-bar-icon {
-        color:lightgray;
-        font-size:9vh;
-    }
-
-    .mobile-menu-content li a{
-        font-size:3vh;
-    }
-
-    .mobile-menu-content .btn{
-        font-size:3vh;
-    }
-    ..mobile-menu-content > .material-icons {
-        font-size:  8vh !important;
-    }
-
-    .mobile-menu-content {
-        left : -1000px;
-        transition:left 0.3s linear;
-    }
-
-    .mobile-menu-content.active{
-        left: 0px;
-    }
-
-    .height-inherit{
-        height:inherit;
-    }
-
-    .desktop-background-menu{
-        position: -webkit-sticky;
-        position: sticky;
-        top: 0px;
-    }
-
-</style>
-
 <body id="root">
     <div class="loading" id="loading">
         <div class="h-100 w-100 d-flex align-items-center justify-content-center">
@@ -122,16 +67,16 @@
                 <!-- mobile menu -->
                 <div class="pl-3 height-inherit">
                     <div class="row no-gutters height-inherit">
-                        <div class="col-9 height-inherit p-2">
+                        <div class="col-10 height-inherit p-2">
                             <a href="index.html">
                                 <img  height="100%" width="auto" src="ltc_logo.png">
                             </a>
                         </div>
-                        <div class="col-3 text-center">
-                            <div class="pt-2 pr-2">
-                                <span class="material-icons mobile-bar-icon">
-                                    menu
-                                </span>
+                        <div class="col-2 text-center height-inherit">
+                            <div class="py-2 px-5 height-inherit">
+                                <a class="mobile-bar-icon height-inherit" id="open-mobile-menu-btn">
+                                    <img src="images/hamburgericon.svg" class="contain-svg" />
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -176,7 +121,7 @@
                 </div>
             </div>
             <!-- desktop menu -->
-            <div class="col-md-0 col-lg-3 col-xl-2 desktop-background-menu">
+            <div class="d-md-none d-lg-block col-lg-3 col-xl-2 desktop-background-menu">
                 <div class="image-container d-flex justify-content-center align-items-center mb-md-5 mb-lg-5">
                     <div class="p-3">
                         <a href="index.html">
@@ -221,7 +166,7 @@
                             Come and let your taste buds get satisfied with our best dishes.
                         </p>
                         <br>
-                        <a class="btn btn-warning btn-lg p-5 chk-btn" href="#menu">CHECK OUR MENU</a>
+                        <a class="btn btn-warning btn-lg p-5" href="#menu"><h3><strong>CHECK OUR MENU</strong></h3></a>
                     </div>
                 </div>
                 <div id="about-us" class="bg-white text-center p-5 about-us">
