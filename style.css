@@ -1,11 +1,14 @@
 
 
-.desktop-background-menu{
-    height:100vh;
+.desktop-background-menu {
+    height: 100vh;
     /* background-color: brown; */
     background-image: url('wood-tile.jpg');
-    font-size:2vh;
-    padding-top:30px;
+    font-size: 2vh;
+    padding-top: 30px;
+    position: -webkit-sticky !important;
+    position: sticky !important;
+    top: 0px;
 }
 
 .desktop-background-menu button{
@@ -261,12 +264,6 @@ color: initial;
 
 .height-inherit {
     height: inherit;
-}
-
-.desktop-background-menu {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0px;
 }
 
 @media (max-width:992px) {
