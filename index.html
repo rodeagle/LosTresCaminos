@@ -27,29 +27,6 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 
-    <!-- <link rel="stylesheet" href="css/styles.css?v=1.0"> -->
-    <!-- css and javascript -->
-    <link rel="stylesheet" href="style.css">
-    <script src="data.js"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
-    <!-- boostrap -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <!-- material icons -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <!-- handlebars -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.6/handlebars.min.js" integrity="sha512-zT3zHcFYbQwjHdKjCu6OMmETx8fJA9S7E6W7kBeFxultf75OPTYUJigEKX58qgyQMi1m1EgenfjMXlRZG8BXaw==" crossorigin="anonymous"></script>
-    <!-- main  -->
-    <script src="main.js"></script>
-
-    <style>
-        #content{
-            scroll-behavior: smooth; 
-        }
-    </style>
-
 </head>
 <body id="root">
     <div class="loading" id="loading">
@@ -63,13 +40,13 @@
             <!-- z-index 100 -->
             <div class="backdrop-background-mobile"></div>
             <!-- z-index 101 -->
-            <div class="d-xs-block d-sm-block d-md-block d-lg-none d-xl-none col-12 text-light mobile-bar">
+            <div class="d-xs-block d-sm-block d-md-block d-lg-none d-xl-none col-12 text-light mobile-bar position-fixed">
                 <!-- mobile menu -->
                 <div class="pl-3 height-inherit">
                     <div class="row no-gutters height-inherit">
                         <div class="col-10 height-inherit p-2">
                             <a href="index.html">
-                                <img  height="100%" width="auto" src="ltc_logo.png">
+                                <img height="100%" width="auto" src="ltc_logo.png">
                             </a>
                         </div>
                         <div class="col-2 text-center height-inherit">
@@ -125,7 +102,7 @@
                 <div class="image-container d-flex justify-content-center align-items-center mb-md-5 mb-lg-5">
                     <div class="p-3">
                         <a href="index.html">
-                            <img class="responsive logo-responsive"  width="100%" src="ltc_logo.png">
+                            <img class="responsive logo-responsive" width="100%" src="ltc_logo.png">
                         </a>
                     </div>
                 </div>
@@ -160,7 +137,8 @@
                     <div class="p-5">
                         <h1>House of the authentic Mexican taste</h1>
                         <br>
-                        <p>Come taste a selection of the most authentic mexican dishes with the best selection of 
+                        <p>
+                            Come taste a selection of the most authentic mexican dishes with the best selection of
                             Tequilas and prepared drinks.
 
                             Come and let your taste buds get satisfied with our best dishes.
@@ -183,28 +161,28 @@
                         <div class="sticky-filter">
                             <ul class="nav nav-tabs">
                                 <li class="nav-item">
-                                  <a class="nav-link" href="#appetizer">
-                                    <span class="material-icons icon">
-                                        emoji_food_beverage
-                                    </span>
-                                    <span class="tab-selector">Appetizer</span>
-                                  </a>
+                                    <a class="nav-link" href="#appetizer">
+                                        <span class="material-icons icon">
+                                            emoji_food_beverage
+                                        </span>
+                                        <span class="tab-selector">Appetizer</span>
+                                    </a>
                                 </li>
                                 <li class="nav-item">
-                                  <a class="nav-link" href="#side">
-                                    <span class="material-icons icon">
-                                        local_dining
-                                    </span>
-                                    <span class="tab-selector">Side</span>
-                                  </a>
+                                    <a class="nav-link" href="#side">
+                                        <span class="material-icons icon">
+                                            local_dining
+                                        </span>
+                                        <span class="tab-selector">Side</span>
+                                    </a>
                                 </li>
                                 <li class="nav-item">
-                                  <a class="nav-link" href="#kids">
-                                    <span class="material-icons icon">
-                                        local_bar
-                                    </span>
-                                    <span class="tab-selector">Kids</span>
-                                  </a>
+                                    <a class="nav-link" href="#kids">
+                                        <span class="material-icons icon">
+                                            local_bar
+                                        </span>
+                                        <span class="tab-selector">Kids</span>
+                                    </a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="#fajitas">
@@ -212,7 +190,7 @@
                                             local_bar
                                         </span>
                                         <span class="tab-selector">Main</span>
-                                      </a>
+                                    </a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="#beverages">
@@ -238,7 +216,7 @@
                                         <span class="tab-selector">Desserts</span>
                                     </a>
                                 </li>
-                              </ul>
+                            </ul>
                         </div>
                         <br>
                         <!-- appetizers -->
@@ -342,3 +320,26 @@
     </div>
 </body>
 </html>
+
+<!-- <link rel="stylesheet" href="css/styles.css?v=1.0"> -->
+<!-- css and javascript -->
+<link rel="stylesheet" href="style.css">
+<script src="data.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+<!-- boostrap -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<!-- material icons -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<!-- handlebars -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.6/handlebars.min.js" integrity="sha512-zT3zHcFYbQwjHdKjCu6OMmETx8fJA9S7E6W7kBeFxultf75OPTYUJigEKX58qgyQMi1m1EgenfjMXlRZG8BXaw==" crossorigin="anonymous"></script>
+<!-- main  -->
+<script src="main.js"></script>
+
+<style>
+    #content {
+        scroll-behavior: smooth;
+    }
+</style>
