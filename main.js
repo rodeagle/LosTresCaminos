@@ -67,7 +67,7 @@ class Products {
     template(){
         return `
         {{#each items}}
-            <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 col-xl-3 product" style="position:relative">
+            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 col-xl-3 product" style="position:relative">
                 <img class="" style="object-fit: fill"  width="100%" height="100%" src="{{#if img-path}}{{img-path}}{{else}}/images/default-dish.png{{/if}}" loading="lazy">
                 <div class="info-container">
                     <div>
@@ -76,7 +76,7 @@ class Products {
                         </div>
                     </div>
                     <div>
-                        {{description}}
+                        {{{description}}}
                     </div>
                     <div>
                         <div class="font-weight-bold">
@@ -135,8 +135,11 @@ function init(){
     // render call us now button
     RenderDOM('call-us-now',CallUsNowButton,_location);
     // render products 
-    var _items = data.products.filter(x => _location.appetizers.includes(x.id));
-    RenderDOM('appetizer-content',Products, { items : _items });
+    var appetizers = data.products.filter(x => _location.appetizers.includes(x.id));
+    RenderDOM('appetizer-content', Products, { items: appetizers });
+    // side orders
+    var sideOrders = data.products.filter(x => _location.sideOrders.includes(x.id));
+    RenderDOM('sides-content', Products, { items: sideOrders });
     // render locations
     RenderDOM('locations-display',Locations, { locations : JsonObjectToArray( data.locations) });
 
