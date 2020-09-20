@@ -65,7 +65,8 @@ color: initial;
     background-image: url('main-image.png');
 
     /* Set a specific height */
-    height: 100vh;
+    height: 100%;
+    width:100%;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -73,11 +74,11 @@ color: initial;
 }
 
 .parallax-2 {
-/* The image used */
+    /* The image used */
     background-image: url('main-image-2.jpg');
-
     /* Set a specific height */
-    height: 100vh;
+    height: 100%;
+    width: 100%;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -85,11 +86,11 @@ color: initial;
 }
 
 .parallax-3 {
-/* The image used */
+    /* The image used */
     background-image: url('main-image-3.jpg');
-
     /* Set a specific height */
-    height: 100vh;
+    height: 100%;
+    width: 100%;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;

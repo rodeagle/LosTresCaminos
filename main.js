@@ -69,7 +69,7 @@ class Products {
         {{#each items}}
             <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4 col-xl-3 product" style="position:relative">
                 <img class="" style="object-fit: fill"  width="100%" height="100%" src="{{img-path}}" loading="lazy">
-                <div class="info-container" style="display:grid;grid-template-columns:auto;grid-template-rows:7vh 20vh 6vh; position:absolute;z-index:10;top:0;left:0;">
+                <div class="info-container" style="width:100%;display:grid;grid-template-columns:auto;grid-template-rows:7vh 20vh 6vh; position:absolute;z-index:10;top:0;left:0;">
                     <div style="grid-column: 1/2;">
                         <div class="p-2 font-weight-bold">
                             {{title}}
@@ -110,7 +110,7 @@ function RenderDOM(id,element,data){
     let html = new element().template();
     let template = Handlebars.compile(html);
     let result = template(data);
-    document.getElementById(id).innerHTML = result;
+    $(`#${id}`).html(result);
 }
 
 function Responsive() {
@@ -138,8 +138,6 @@ function init(){
     var _items = data.products.filter(x => _location.appetizers.includes(x.id));
     RenderDOM('appetizer-content',Products, { items : _items });
     // render locations
-    console.log(JsonObjectToArray(data.locations));
-    console.log(new Locations().template());
     RenderDOM('locations-display',Locations, { locations : JsonObjectToArray( data.locations) });
 
     // init complete 
