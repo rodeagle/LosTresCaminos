@@ -67,6 +67,7 @@ color: initial;
     /* Set a specific height */
     height: 100vh;
     width:100%;
+    transition:height 1s ease-out;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -80,6 +81,7 @@ color: initial;
     height: 500px;
     width: 100%;
     background-attachment: fixed;
+    transition: height 1s ease-out;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -92,6 +94,7 @@ color: initial;
     height: 500px;
     width: 100%;
     background-attachment: fixed;
+    transition: height 1s ease-out;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -292,4 +295,33 @@ color: initial;
     width: 100%;
     height: 100%;
     object-fit: contain;
+}
+
+@media (orientation:landscape) {
+    .logo-orientation-limits {
+        max-height: 33vh;
+        width: auto;
+    }
+
+    .landscape-scroll {
+        overflow-x: hidden;
+        overflow-y: scroll;
+    }
+
+    .max-33vw {
+        max-width: 33vw !important;
+    }
+
+    div.landscape-fixedmargin {
+        margin-right: 1em !important;
+    }
+
+    .product {
+        height: 60vh !important;
+    }
+}
+
+div.mobile-menu-btn {
+    right: 0 !important;
+    position: absolute !important;
 }
