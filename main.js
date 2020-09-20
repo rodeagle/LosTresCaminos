@@ -72,7 +72,7 @@ class Products {
                 <div class="info-container">
                     <div>
                         <div class="p-2 font-weight-bold">
-                            {{title}}
+                            {{{title}}}
                         </div>
                     </div>
                     <div>
@@ -140,6 +140,12 @@ function init(){
     // side orders
     var sideOrders = data.products.filter(x => _location.sideOrders.includes(x.id));
     RenderDOM('sides-content', Products, { items: sideOrders });
+    // kids menu
+    var kidsMenu = data.products.filter(x => _location.kids.includes(x.id));
+    RenderDOM('kids-content', Products, { items: kidsMenu });
+    // fajitas menu
+    var fajitas = data.products.filter(x => _location.fajitas.includes(x.id));
+    RenderDOM('fajitas-content', Products, { items: fajitas });
     // render locations
     RenderDOM('locations-display',Locations, { locations : JsonObjectToArray( data.locations) });
 

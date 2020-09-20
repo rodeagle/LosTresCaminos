@@ -151,10 +151,168 @@ var data = {
         {
             id: 303,
             title: "Enchilada",
-            "description": "Your Choise of beef, chicken or cheese, topped with special sauce",
+            "description": "Your Choise of beef, chicken, or cheese topped with special sauce",
             "price": "1.99",
         },
-
+        {
+            id: 304,
+            title: "Burrito",
+            "description": "Your Choise of chicken, beans, or beef topped with special sauce",
+            "price": "3.49",
+        },
+        {
+            id: 305,
+            title: "Chile Relleno",
+            "description": "Topped with a special sauce",
+            "price": "3.45",
+        },
+        {
+            id: 306,
+            title: "Tamale",
+            "description": "Topped with ground beef and mild red sauce",
+            "price": "3.49",
+        },
+        {
+            id: 307,
+            title: "Tostadas",
+            "description": "Flat corn tortillas covered with ground beef, lettuce, tomatoes, and sour cream",
+            "price": "3.99",
+        },
+        {
+            id: 308,
+            title: "Chimichanga a la Carte",
+            "description": "Ground beef or Marinated Chicken",
+            "price": "3.99",
+        }, 
+        {
+            id: 309,
+            title: "Chimichanga a la Carte",
+            "description": "Grilled Steak or Chicken",
+            "price": "4.99",
+        },
+        {
+            id: 310,
+            title: "Pico de Gallo",
+            "description": "Diced jalape&ntilde;o peppers, onions, tomato, and cilantro with a tangy lemon taste",
+            "price": "1.05",
+        },
+        {
+            id: 311,
+            title: "Sour Cream",
+            "description": "Dip in sour cream",
+            "price": "1.05",
+        },
+        {
+            id: 312,
+            title: "Jalape&ntilde;o Peppers",
+            "description": "Jalape&ntilde;o Peppers",
+            "price": "1.05",
+        },
+        {
+            id: 313,
+            title: "Tortillas",
+            "description": "Flour or corn tortilla",
+            "price": "1.05",
+        },
+        {
+            id: 314,
+            title: "Mexican Rice",
+            "description": "Mexican Rice",
+            "price": "1.99",
+        },
+        {
+            id: 315,
+            title: "Refried Beans",
+            "description": "Refried Beans",
+            "price": "1.99",
+        },
+        // kids menu 
+        {
+            id: 400,
+            title: "Enchilada",
+            "description": "Served with rice and beans",
+            "price": "4.99",
+        },
+        {
+            id: 401,
+            title: "Burrito",
+            "description": "Served with rice and beans",
+            "price": "4.99",
+        },
+        {
+            id: 402,
+            title: "Taco",
+            "description": "Served with rice and beans",
+            "price": "4.99",
+        },
+        {
+            id: 403,
+            title: "Quesadilla",
+            "description": "Served with rice and beans",
+            "price": "4.99",
+        },
+        {
+            id: 404,
+            title: "Hamburger or Cheeseburger",
+            "description": "Served with lettuce, tomate, sour cream and Fries",
+            "price": "4.99",
+        },
+        {
+            id: 405,
+            title: "Chicken Fingers",
+            "description": "Served with Fries",
+            "price": "4.99",
+        },
+        {
+            id: 406,
+            title: "Cheese Fingers",
+            "description": "Served with Fries",
+            "price": "4.99",
+        },
+        // fajitas
+        {
+            id: 500,
+            title: "Fajita Mushroom",
+            "description": "For the vegetarian, Topped with melted cheese",
+            "price": "9.99",
+        },
+        {
+            id: 501,
+            isNew : true,
+            title: "Fajita Potato",
+            "description": "Baked potato with grilled chicken or steak, bell pepper, tomato, onions and covered with cheese sauce, make it double for only $ 22.99",
+            "price": "22.99",
+        },
+        {
+            id: 502,
+            title: "Fajita Steak, Chicken or Combo",
+            "description": "Make it double for only $22.99",
+            "price": "11.99",
+        },
+        {
+            id: 503,
+            title: "Shrimp Fajita",
+            "description": "Make it double for only $23.99",
+            "price": "12.99",
+        },
+        {
+            id: 504,
+            title: "Fajita Jalisco",
+            "description": "Tender strips of chicken, beef skirt steak, and shrimp, make it double for only $23.99",
+            "price": "12.99",
+        },
+        {
+            id: 505,
+            title: "Fajita Tres Camino's",
+            "description": "Steak, chicken, shrimp, chorizo and Mexican sausage, make it double for only $25.99",
+            "price": "13.99",
+        },
+        {
+            id: 506,
+            title: "Vallarta Fajita",
+            "description": "Imitation crab meat, grilled chicken, steak, and shrimp cooked with fresh pineapple, bell pepper, tomato and onions. Make it double for $25.99",
+            "price": "13.99",
+        },
     ],
     "locations": {
         "paris" : {
@@ -167,20 +325,22 @@ var data = {
             hours : 'SUN - THR 10:00AM - 9:00PM <br> FRI - SAT 10:00AM - 10:00PM',
             maindishes : [1],
             beverages: [100],
-            sideOrders : [300,301,302,303,304],
+            fajitas : [500,501,502,503,504,505,506],
+            kids : [400,401,402,403,404,405,406],
+            sideOrders : [300,301,302,303,304,305,306,307,308,309,310,311,312,313,314,315],
             appetizers : [200,201,202,203,204,205,206,207,208,209,210,211,212,213,214,215,216]
         },
-        "paris2" : {
-            "location" : "PARIS",
-            "street" : "E Jasper 508",
-            "city" : "Paris",
-            "zipcode" : "61944",
-            "state" : "IL",
-            "phone" : "70810320123",
-            hours : 'SUN - THR 10:00AM - 9:00PM <br> FRI - SAT 10:00AM - 10:00PM',
-            maindishes : [1],
-            beverages : [100],
-            appetizers: [200, 201, 202, 203, 204, 205, 206, 207, 208, 209, 210, 211, 212, 213, 214, 215, 216]
-        }
+        //"paris2" : {
+        //    "location" : "PARIS",
+        //    "street" : "E Jasper 508",
+        //    "city" : "Paris",
+        //    "zipcode" : "61944",
+        //    "state" : "IL",
+        //    "phone" : "70810320123",
+        //    hours : 'SUN - THR 10:00AM - 9:00PM <br> FRI - SAT 10:00AM - 10:00PM',
+        //    maindishes : [1],
+        //    beverages : [100],
+        //    appetizers: [200, 201, 202, 203, 204, 205, 206, 207, 208, 209, 210, 211, 212, 213, 214, 215, 216]
+        //}
     }
 }
