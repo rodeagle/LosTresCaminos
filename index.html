@@ -45,10 +45,16 @@
         div.landscape-fixedmargin {
             margin-right:1em !important;
         }
-        div.mobile-menu-btn{
-            right:0;position:absolute;
+
+        .product{
+            height:40vh!important;
         }
     }
+    div.mobile-menu-btn{
+        right:0 !important;
+        position:absolute !important;
+    }
+
 </style>
 <body id="root">
     <div class="loading" id="loading">
@@ -178,9 +184,10 @@
 
                 </div>
                 <div class="menu" id="menu">
-                    <div class="text-center">
+                    <div class="text-center pt-3">
                         <h1>MENU</h1>
-                        <div class="sticky-filter my-3 px-3" style="background-color:white">
+                        <small class="font-italic">* Click on the images to get more details and prices</small>
+                        <div class="sticky-filter my-3 px-3 pt-4 pb-2" style="background-color:white">
                             <div class="input-group">
                                 <select onchange="location = this.value;" class="form-control form-control-lg">
                                     <option value="/#appetizer">Appetizers</option>

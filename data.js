@@ -30,7 +30,6 @@ var data = {
             "description" : "Our finest avocado selection made to the best combination",
             "price" : "3.99",
             "discount-price" : "",
-            "img-path" : "images/appetizer/guacamole.jpg"
         },
         {
             id : 202,
@@ -38,7 +37,6 @@ var data = {
             "description" : "Our finest avocado selection made to the best combination",
             "price" : "3.99",
             "discount-price" : "",
-            "img-path" : "images/appetizer/guacamole.jpg"
         },
         {
             id : 203,
@@ -46,7 +44,6 @@ var data = {
             "description" : "Our finest avocado selection made to the best combination",
             "price" : "3.99",
             "discount-price" : "",
-            "img-path" : "images/appetizer/guacamole.jpg"
         },
         {
             id : 204,
@@ -54,7 +51,6 @@ var data = {
             "description" : "Our finest avocado selection made to the best combination",
             "price" : "3.99",
             "discount-price" : "",
-            "img-path" : "images/appetizer/guacamole.jpg"
         },
         {
             id : 205,
@@ -62,7 +58,6 @@ var data = {
             "description" : "Our finest avocado selection made to the best combination",
             "price" : "3.99",
             "discount-price" : "",
-            "img-path" : "images/appetizer/guacamole.jpg"
         },        
         {
             id : 206,
@@ -70,7 +65,6 @@ var data = {
             "description" : "Our finest avocado selection made to the best combination",
             "price" : "3.99",
             "discount-price" : "",
-            "img-path" : "images/appetizer/guacamole.jpg"
         },
         {
             id : 207,
@@ -78,7 +72,6 @@ var data = {
             "description" : "Our finest avocado selection made to the best combination",
             "price" : "3.99",
             "discount-price" : "",
-            "img-path" : "images/appetizer/guacamole.jpg"
         },
     ],
     "locations": {
