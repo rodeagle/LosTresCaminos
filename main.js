@@ -146,6 +146,12 @@ function init(){
     // fajitas menu
     var fajitas = data.products.filter(x => _location.fajitas.includes(x.id));
     RenderDOM('fajitas-content', Products, { items: fajitas });
+    // traditional menu
+    var traditional = data.products.filter(x => _location.traditional.includes(x.id));
+    RenderDOM('favorites-content', Products, { items: traditional });
+    // steak menu
+    var steak = data.products.filter(x => _location.steak.includes(x.id));
+    RenderDOM('steak-content', Products, { items: steak });
     // render locations
     RenderDOM('locations-display',Locations, { locations : JsonObjectToArray( data.locations) });
 
