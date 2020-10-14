@@ -124,7 +124,7 @@ color: initial;
     z-index:11;
 }
 
-@media (orientation:landscape) {
+@media (orientation:landscape) and (max-width:1199px) {
     #content .parallax-1 {
         font-size: 4vh;
     }
@@ -137,7 +137,7 @@ color: initial;
             font-size: 8vh;
         }
 }
-@media (orientation:portrait) {
+@media (orientation:portrait) and (max-width:1199px) {
     #content .parallax-1 {
         font-size: 2vh;
     }

@@ -1,4 +1,3 @@
-
 function getUrlParameter(name) {
     name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
     var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
@@ -12,7 +11,6 @@ function JsonObjectToArray(obj){
         return obj[key];
     });
 }
-
 
 var local = getUrlParameter('location');
 
@@ -55,7 +53,7 @@ class Locations{
         return `
             {{#each locations}}
                 <hr>
-                <div class="p-5">
+                <div class="p-0 p-md-5">
                     ${new AddressLight().template()}
                 </div>
             {{/each}}
@@ -113,6 +111,14 @@ function RenderDOM(id,element,data){
     $(`#${id}`).html(result);
 }
 
+function ModalService() {
+    return {
+        Show: function () {
+            // build the modal service
+        }
+    };
+}
+
 function Responsive() {
     $('#close-mobile-menu-btn').click(function () {
         $('.mobile-menu-content').removeClass('active');
@@ -125,6 +131,8 @@ function Responsive() {
     $('.backdrop-background-mobile').click(function () {
         $('.mobile-menu-content').removeClass('active');
         $('.backdrop-background-mobile').removeClass('active');
+        $(this).stopPropagation();
+        $(this).preventDefault();
     });
 }
 

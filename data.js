@@ -493,11 +493,11 @@ var data = {
     "locations": {
         "paris" : {
             "location" : "PARIS",
-            "street" : "E Jasper 508",
+            "street": "508 E Jasper St",
             "city" : "Paris",
             "zipcode" : "61944",
             "state" : "IL",
-            "phone" : "70810320123",
+            "phone": "217-466-5824",
             hours : 'SUN - THR 11:00AM - 9:00PM <br> FRI - SAT 11:00AM - 10:00PM',
             maindishes : [1],
             beverages: [100],
