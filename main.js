@@ -67,7 +67,7 @@ class Products {
     template(){
         return `
         {{#each items}}
-            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 col-xl-3 product" style="position:relative">
+            <div class="col-6 col-xs-6 col-sm-6 col-md-6 col-lg-6 col-xl-3 product" style="position:relative">
                 <img class="" style="object-fit: fill"  width="100%" height="100%" src="{{#if img-path}}{{img-path}}{{else}}/images/default-dish.png{{/if}}" loading="lazy">
                 <div class="info-container">
                     <div>

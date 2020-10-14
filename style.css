@@ -124,15 +124,33 @@ color: initial;
     z-index:11;
 }
 
-#content{
-    font-size:2.5vh;
+@media (orientation:landscape) {
+    #content .parallax-1 {
+        font-size: 4vh;
+    }
+
+        #content .parallax-1 h1 {
+            font-size: 12vh;
+        }
+
+        #content .parallax-1 h2 {
+            font-size: 8vh;
+        }
 }
-#content h1{
-    font-size:4.5vh;
+@media (orientation:portrait) {
+    #content .parallax-1 {
+        font-size: 2vh;
+    }
+
+        #content .parallax-1 h1 {
+            font-size: 4vh;
+        }
+
+        #content .parallax-1 h2 {
+            font-size: 3vh;
+        }
 }
-#content h2{
-    font-size:4.0vh;
-}
+
 
 .icon{
     font-size:5vh !important;
@@ -301,6 +319,7 @@ color: initial;
     .logo-orientation-limits {
         max-height: 33vh;
         width: auto;
+        min-width: unset;
     }
 
     .landscape-scroll {
