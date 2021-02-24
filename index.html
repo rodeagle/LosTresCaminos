@@ -160,8 +160,7 @@
                 <div class="menu" id="menu">
                     <div class="text-center pt-3">
                         <h1>MENU</h1>
-                        <small class="font-italic">* Click on the images to get more details and prices</small>
-                        <div class="sticky-filter my-3 px-3 pt-4 pb-2" style="background-color:white">
+                        <!-- <div class="sticky-filter my-3 px-3 pt-4 pb-2" style="background-color:white">
                             <div class="input-group">
                                 <select onchange="location = this.value;" class="form-control form-control-lg">
                                     <option value="/#appetizer">Appetizers</option>
@@ -169,109 +168,11 @@
                                     <option value="/#kids">Kid's Menu</option>
                                 </select>
                             </div>
-                        </div>
+                        </div> -->
+                        <small class="font-italic">* Click on the images to get more details and prices</small>
                         <br>
-                        <!-- appetizers -->
-                        <div id="appetizer">
-                            <div class="py-5">
-                                <h2>Appetizers</h2>
-                            </div>
-                            <div class="m-lg-3 m-xl-4">
-                                <div class="row no-gutters" id="appetizer-content"></div>
-                            </div>
-                        </div>
+                        <div id="product-list"></div>
                         <br>
-                        <div id="side" class="mt-5">
-                            <div class="py-5">
-                                <h2>Side Orders</h2>
-                            </div>
-                            <div class="m-lg-3 m-xl-4">
-                                <div class="row no-gutters" id="sides-content"></div>
-                            </div>
-                        </div>
-                        <div id="kids" class="mt-5">
-                            <div class="py-5">
-                                <h2>Kid's Menu</h2>
-                            </div>
-                            <div class="p-2 p-md-5">
-                                <small class="font-italic">For our guests 12 years and under</small>
-                            </div>
-                            <div class="m-lg-3 m-xl-4">
-                                <div class="row no-gutters" id="kids-content">
-                                </div>
-                            </div>
-                        </div>
-                        <div id="fajitas" class="mt-5">
-                            <div class="py-5">
-                                <h2>Fajitas</h2>
-                            </div>
-                            <div class="p-2 p-md-5 text-danger">
-                                Served with Mexican rice, refried beans, flour tortilla, lettuce, pico de gallo, guacamole and sour cream.
-                            </div>
-                            <div class="px-5 pt-1 pb-5 text-danger">
-                                Add Queso Fundido for $1.29
-                            </div>
-                            <div class="m-lg-3 m-xl-4">
-                                <div class="row no-gutters" id="fajitas-content"></div>
-                            </div>
-                            <div class="p-2 p-md-5">
-                                <div class="font-italic text-light p-3" style="background-color:#F15B3F">
-                                    Consuming raw or undercooked meat, poultry/eggs, or seafood may cause foodborne illness.
-                                </div>
-                            </div>
-                        </div>
-                        <div id="steak" class="mt-5">
-                            <h2>Steak Plates</h2>
-                            <div class="m-lg-3 m-xl-4">
-                                <div class="row no-gutters" id="steak-content"></div>
-                            </div>
-                        </div>
-                        <div id="favorites" class="mt-5">
-                            <h2>Traditional Favorites</h2>
-                            <div class="m-lg-3 m-xl-4">
-                                <div class="row no-gutters" id="favorites-content">
-                                </div>
-                            </div>
-                        </div>
-                        <div id="lunch" class="mt-5">
-                            <h2>Lunch Menu</h2>
-                            <div class="m-lg-3 m-xl-4">
-                                <div class="row no-gutters" id="lunch-content">
-                                </div>
-                            </div>
-                        </div>
-                        <div id="specials" class="mt-5">
-                            <h2>Specials of the House</h2>
-                            <div class="m-lg-3 m-xl-4">
-                                <div class="row no-gutters" id="specials-content"></div>
-                            </div>
-                        </div>
-                        <div id="combos" class="mt-5">
-                            <h2>Combinations Dinner's</h2>
-                            <div class="m-lg-3 m-xl-4">
-                                <div class="row no-gutters" id="combos-content"></div>
-                            </div>
-                        </div>
-                        <div id="beverages" class="mt-5">
-                            <h2>Beverages</h2>
-                            <div class="m-lg-3 m-xl-4">
-                                <div class="row no-gutters" id="beverages-content"></div>
-                            </div>
-                        </div>
-                        <div id="vegeterian" class="mt-5">
-                            <h2>Vegeterian Plates</h2>
-                            <div class="m-lg-3 m-xl-4">
-                                <div class="row no-gutters" id="vegeterian-content">
-                                </div>
-                            </div>
-                        </div>
-                        <div id="desserts" class="mt-5">
-                            <h2>Desserts</h2>
-                            <div class="m-lg-3 m-xl-4">
-                                <div class="row no-gutters" id="desserts-content">
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
                 <div class="parallax-3"></div>
@@ -295,8 +196,8 @@
 
 <!-- <link rel="stylesheet" href="css/styles.css?v=1.0"> -->
 <!-- css and javascript -->
-<link rel="stylesheet" href="style.css">
-<script src="data.js"></script>
+<link rel="stylesheet" href="style.min.css">
+<!--<script src="data.js"></script>-->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
 <!-- boostrap -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -308,10 +209,12 @@
 <!-- handlebars -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.6/handlebars.min.js" integrity="sha512-zT3zHcFYbQwjHdKjCu6OMmETx8fJA9S7E6W7kBeFxultf75OPTYUJigEKX58qgyQMi1m1EgenfjMXlRZG8BXaw==" crossorigin="anonymous"></script>
 <!-- main  -->
-<script src="main.js"></script>
+<script type="module" src="scripts/main.min.js"></script>
 
 <style>
     #content {
         scroll-behavior: smooth;
     }
 </style>
+
+

@@ -344,3 +344,21 @@ div.mobile-menu-btn {
     right: 0 !important;
     position: absolute !important;
 }
+
+.modal-image{
+    width:auto;
+    height:300px;
+}
+
+.modal-image img{
+    object-fit:fill;
+    width: 100%;
+    height: 100%;
+}
+
+.orage{
+    color:orange;
+}
+.bolder{
+    font-weight:bolder;
+}
