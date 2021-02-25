@@ -1,3 +1,13 @@
+//import tables from "/easytables.js";
+"use strict";
+import { CallUsNowButton } from "../components/CallUsNowButton.js";
+import restaurant from "./data.min.js";
+import modal from "./modal.js";
+import K from './kickback.js';
+import { Products } from "../components/Products.min.js";
+import css_service from "../scripts/inject-css.min.js";
+
+
 function getUrlParameter(name) {
     name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
     var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
@@ -12,112 +22,10 @@ function JsonObjectToArray(obj){
     });
 }
 
-var local = getUrlParameter('location');
-
-local = !local ? 'paris' : local; 
-
-console.log(data);
-
-var _location = data.locations[local];
-
-console.log(_location);
-
-class Address{
-    template(){
-        return `
-            <div class="text-center text-light font-weight-bold">
-                {{street}}<br>
-                {{city}} {{state}} {{zipcode}} <br>
-                {{phone}} <br><br>
-                {{{hours}}}
-            </div>
-        `;
-    }
-}
-
-class AddressLight {
-    template(){
-        return `
-            <div class="text-center">
-                {{street}}<br>
-                {{city}} {{state}} {{zipcode}} <br>
-                {{phone}} <br><br> 
-                {{{hours}}}
-            </div>
-        `;
-    }
-}
-
-class Locations{
-    template(){
-        return `
-            {{#each locations}}
-                <hr>
-                <div class="p-0 p-md-5">
-                    ${new AddressLight().template()}
-                </div>
-            {{/each}}
-        `;
-    }
-}
-
-class Products {
-    template(){
-        return `
-        {{#each items}}
-            <div class="col-6 col-xs-6 col-sm-6 col-md-6 col-lg-6 col-xl-3 product" style="position:relative">
-                <img class="" style="object-fit: fill"  width="100%" height="100%" src="{{#if img-path}}{{img-path}}{{else}}/images/default-dish.png{{/if}}" loading="lazy">
-                <div class="info-container">
-                    <div>
-                        <div class="p-2 font-weight-bold">
-                            {{{title}}}
-                        </div>
-                    </div>
-                    <div>
-                        {{{description}}}
-                    </div>
-                    <div>
-                        <div class="font-weight-bold">
-                        {{#if discount-price}}
-                            <div class="discounted-price">
-                                $ {{discount-price}} <span class="cross-out">$ {{price}}</span>
-                            <div>
-                            {{else}}
-                            <div class="normal-price">
-                                $ {{price}}
-                            </div>
-                        {{/if}}
-                    </div>
-                    </div>
-                </div>
-            </div>
-        {{/each}}
-        `;
-    }
-}
-
-class CallUsNowButton{
-    template(){
-        return `
-            <a class="btn btn-danger bt-block p-3 p-md-3 p-lg-5 chk-btn" href="tel:{{phone}}">CALL US NOW</a>
-        `;
-    }
-}
-
-function RenderDOM(id,element,data){
-    let html = new element().template();
-    let template = Handlebars.compile(html);
-    let result = template(data);
-    $(`#${id}`).html(result);
-}
-
-function ModalService() {
-    return {
-        Show: function () {
-            // build the modal service
-        }
-    };
-}
+var settings = {
+    width : window.screen.width,
+    height : window.screen.height
+};
 
 function Responsive() {
     $('#close-mobile-menu-btn').click(function () {
@@ -134,40 +42,90 @@ function Responsive() {
         $(this).stopPropagation();
         $(this).preventDefault();
     });
+    $('.item-box').click(function(){
+        var itemid = $(this).data('itemid');
+        var item = restaurant.data.Items.filter(x=>x.ID == itemid)[0];
+        var body = `
+            <div class="p-1">
+                <h2 class="text-center">${item.Title}</h2>
+                <div class="text-center modal-image">
+                    <img src="${item.ImgPath}"/>
+                </div>
+                <div class="text-center mt-2">
+                    <p>${item.Description}</p>
+                </div>
+            </div>
+        `;
+        modal.Show({ body });
+    });
 }
 
 function init(){
+    //// render element to div container
+    //RenderDOM('address-display',Address,_location);
+    //// render call us now button
+    //RenderDOM('call-us-now',CallUsNowButton,_location);
+    //// render products 
+    //var appetizers = data.products.filter(x => _location.appetizers.includes(x.id));
+    //RenderDOM('appetizer-content', Products, { items: appetizers });
 
-    // render element to div container
-    RenderDOM('address-display',Address,_location);
-    // render call us now button
-    RenderDOM('call-us-now',CallUsNowButton,_location);
-    // render products 
-    var appetizers = data.products.filter(x => _location.appetizers.includes(x.id));
-    RenderDOM('appetizer-content', Products, { items: appetizers });
-    // side orders
-    var sideOrders = data.products.filter(x => _location.sideOrders.includes(x.id));
-    RenderDOM('sides-content', Products, { items: sideOrders });
-    // kids menu
-    var kidsMenu = data.products.filter(x => _location.kids.includes(x.id));
-    RenderDOM('kids-content', Products, { items: kidsMenu });
-    // fajitas menu
-    var fajitas = data.products.filter(x => _location.fajitas.includes(x.id));
-    RenderDOM('fajitas-content', Products, { items: fajitas });
-    // traditional menu
-    var traditional = data.products.filter(x => _location.traditional.includes(x.id));
-    RenderDOM('favorites-content', Products, { items: traditional });
-    // steak menu
-    var steak = data.products.filter(x => _location.steak.includes(x.id));
-    RenderDOM('steak-content', Products, { items: steak });
-    // render locations
-    RenderDOM('locations-display',Locations, { locations : JsonObjectToArray( data.locations) });
+    // Set styles
+    let style = `
+        .parallax-1{
+            background-size : 100% {{height}}px !important; 
+        }
+        .parallax-2{
+            background-size : 100% 500px !important; 
+        }
+        .parallax-3{
+            background-size : 100% 500px !important; 
+        }
+    `;
+    css_service.Append(style, settings);
 
+    //// render locations
+    //RenderDOM('locations-display',Locations, { locations : JsonObjectToArray( data.locations) });
+    // using new module kickback crappy local react like module without bundler/transpiler
+    let data = restaurant.data;
+    data.Categories;
+    // set the discount prices
+    data.Items.forEach((item) => {
+        let discount = data.Discounts.filter(x => x.ItemID == item.ID);
+        if (discount) {
+            switch (new Date().getDay()) {
+                case 0:
+                    discount = discount.Sunday ? discount : null; break;
+                case 1:
+                    discount = discount.Monday ? discount : null; break;
+                case 2:
+                    discount = discount.Tuesday ? discount : null; break;
+                case 3:
+                    discount = discount.Wednesday ? discount : null; break;
+                case 4:
+                    discount = discount.Thursday ? discount : null; break;
+                case 5:
+                    discount = discount.Friday ? discount : null; break;
+                case 6:
+                    discount = discount.Saturday ? discount : null; break;
+                default: discount = null;
+            }
+        }
+        if (discount) {
+            item['DiscountPrice'] = discount.DiscountPrice;
+        }
+    });
+    // set the items for the categories
+    data.Categories.forEach((item) => {
+        item["Items"] = data.Items.filter((product => product.CategoryID == item.CategoryID));
+    });
+    // render objects
+    K.Render('#call-us-now', CallUsNowButton, data.Settings);
+    K.Render('#product-list', Products, data);
     // init complete 
     document.getElementById('loading').classList.add("complete");
-
+    window.restaurant = data;
     Responsive();
 }
-
+// init call on dom complete load
 document.addEventListener( "DOMContentLoaded", init);
  
