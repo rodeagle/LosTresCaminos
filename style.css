@@ -68,10 +68,12 @@ color: initial;
     height: 100vh;
     width:100%;
     transition:height 1s ease-out;
+    background-position: top;
+    background-size: 600px 600px;
     background-attachment: fixed;
-    background-position: center;
+    /* background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover; */
 }
 
 .parallax-2 {
@@ -82,9 +84,10 @@ color: initial;
     width: 100%;
     background-attachment: fixed;
     transition: height 1s ease-out;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-position: top;
+    background-size: 600px 600px;
+    /* background-repeat: no-repeat;
+    background-size: cover; */
 }
 
 .parallax-3 {
@@ -95,9 +98,10 @@ color: initial;
     width: 100%;
     background-attachment: fixed;
     transition: height 1s ease-out;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-position: top;
+    background-size: 600px 600px;
+    /* background-repeat: no-repeat;
+    background-size: cover; */
 }
 
 .parallax-1 h1{
@@ -343,4 +347,22 @@ color: initial;
 div.mobile-menu-btn {
     right: 0 !important;
     position: absolute !important;
+}
+
+.modal-image{
+    width:auto;
+    height:300px;
+}
+
+.modal-image img{
+    object-fit:fill;
+    width: 100%;
+    height: 100%;
+}
+
+.orage{
+    color:orange;
+}
+.bolder{
+    font-weight:bolder;
 }
