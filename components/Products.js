@@ -76,15 +76,12 @@ export class Products {
             }
             .item-container .item-box {
                 // border : 1px solid gray;
-                box-shadow: 0px 0px 12px 2px gray;
+                // box-shadow: 0px 0px 12px 2px gray;
                 height:200px;
                 background-color:white;
             }
             .item-container .item-box:hover{
-                // border : 1px solid black;
                 cursor:pointer;
-                // box-shadow: 0px 0px 12px 2px;
-                // background-color:white;
             }
             .product-image{
                 height:200px;

@@ -5,6 +5,7 @@ import restaurant from "./data.min.js";
 import modal from "./modal.js";
 import K from './kickback.js';
 import { Products } from "../components/Products.min.js";
+import { Locations } from '../components/Locations.min.js';
 import css_service from "../scripts/inject-css.min.js";
 
 
@@ -24,7 +25,7 @@ function JsonObjectToArray(obj){
 
 var settings = {
     width : window.screen.width,
-    height : window.screen.height
+    height : window.innerHeight
 };
 
 function Responsive() {
@@ -72,7 +73,13 @@ function init(){
     // Set styles
     let style = `
         .parallax-1{
-            height : 100% {{height}}px !important; 
+            background-size : 100% {{height}}px !important; 
+        }
+        .parallax-2{
+            background-size: 100% {{height}}px !important;
+        }
+        .parallax-3{
+            background-size: 100% {{height}}px !important;
         }
     `;
 
@@ -123,6 +130,7 @@ function init(){
     // render objects
     K.Render('#call-us-now', CallUsNowButton, data.Settings);
     K.Render('#product-list', Products, data);
+    K.Render('#locations-display',Locations,data.Settings);
     // init complete 
     document.getElementById('loading').classList.add("complete");
     window.restaurant = data;

@@ -3,10 +3,10 @@ export class AddressLight {
     Template(){
         return `
             <div class="text-center">
-                {{street}}<br>
-                {{city}} {{state}} {{zipcode}} <br>
-                {{phone}} <br><br> 
-                {{{hours}}}
+                {{Street}}<br>
+                {{City}} {{State}} {{Zipcode}} <br>
+                {{Phone}} <br><br> 
+                {{{Hours}}}
             </div>
         `;
     }

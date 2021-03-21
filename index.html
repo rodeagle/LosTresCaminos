@@ -30,11 +30,29 @@
     <meta name="viewport" content="width=device-width, user-scalable=no">
 
 </head>
+<style>
+    .go-up-btn{
+        z-index: 999999999;
+        right: 20px;
+        bottom: 20px;
+        height:45px;
+        width:45px;
+        position:fixed;
+        background-color:brown;
+    }
+</style>
 <body id="root">
     <div class="loading" id="loading">
         <div class="h-100 w-100 d-flex align-items-center justify-content-center">
             <img src="progress.gif">
         </div>
+    </div>
+    <div class="go-up-btn">
+        <a href="#root">
+            <span class="material-icons text-light d-flex align-items-center justify-content-center h-100">
+                arrow_upward
+            </span>
+        </a>
     </div>
     <div class="main-container">
         <div class="row no-gutters">
