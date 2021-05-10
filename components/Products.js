@@ -12,9 +12,9 @@ export class Products {
                     <div class="row no-gutters p-1">
                     {{#each Items}}
                         <div class="col-md-12 item-container p-2">
-                            {{#if New}}<div class="is-new p-1">New!</div>{{/if}}
+                            {{#if New}}<div class="is-new p-1 mr-2 float-right">New!</div>{{/if}}
                             <div class="item-box row no-gutters" data-itemid="{{ID}}">
-                                <div class="col-12 text-center p-2 pl-3">
+                                <div class="col-12 text-left p-2 pl-3">
                                     <h5 class="site-main-color">{{Title}}</h5>
                                 </div>
                                 <div class="col-3 p-2">
@@ -78,6 +78,8 @@ export class Products {
                 width: 100px;
                 z-index: 1;
                 background-color: #F15B3F;
+                right:10px;
+                top:15px;
             }
             .category-item {
                 //background-color:#EEB78A;
