@@ -6,22 +6,31 @@ export class Products {
             {{#each Categories}}
                 <div class="category-item">
                     <div class="p-4"><h1>{{Title}}</h1></div>
-                    {{{Header}}}
+                    <div class="p-2">
+                        {{{Header}}}
+                    </div>
                     <div class="row no-gutters p-1">
                     {{#each Items}}
-                        <div class="col-md-12 col-lg-6 col-xl-4 item-container p-2">
-                            {{#if New}}<div class="is-new p-1 text-center">New!</div>{{/if}}
+                        <div class="col-md-12 item-container p-2">
+                            {{#if New}}<div class="is-new p-1">New!</div>{{/if}}
                             <div class="item-box row no-gutters" data-itemid="{{ID}}">
-                                <div class="col-5">
-                                    <img src="{{ImgPath}}" class="product-image"/>
+                                <div class="col-12 text-center p-2 pl-3">
+                                    <h5 class="site-main-color">{{Title}}</h5>
                                 </div>
-                                <div class="col-7 p-1 item-text-box">
-                                    <div class="d-flex text-center align-items-center justify-content-center"><h4>{{Title}}</h4></div>
+                                <div class="col-3 p-2">
+                                    {{#if ImgPath}}
+                                    <img src="{{ImgPath}}" class="product-image"/>
+                                    {{/if}}
+                                </div>
+                                <div class="col-9 p-1 text-left">
+                                    <p>{{{Description}}}</p>
+                                </div>
+                                <div class="col-12 text-right">
                                     {{#if DiscountPrice}}
-                                    <div class="text-center"><span class="pl-1 crossed">$ {{Price}}</span>$ {{DiscountPrice}}</div>
+                                    <div><span class="pl-1 crossed">$ {{Price}}</span>$ {{DiscountPrice}}</div>
                                     {{/if}}
                                     {{#unless DiscountPrice}}
-                                    <div class="d-flex text-center align-items-center justify-content-center"><h5>$ {{Price}}</h5></div>
+                                    {{#if Price}}<div class="pr-2"><h5>$ {{Price}}</h5></div>{{/if}}
                                     {{/unless}}
                                     <div class="icons"></div>
                                 </div>
@@ -53,8 +62,7 @@ export class Products {
             .item-text-box{
                 display: grid;
                 grid-template-columns: auto;
-                grid-template-rows: 40% 30% 30%;
-                // background-color:#EEB78A;
+                grid-template-rows: 30% 70%;
             }
             .crossed {
                 text-decoration:line-through;
@@ -77,14 +85,15 @@ export class Products {
             .item-container .item-box {
                 // border : 1px solid gray;
                 // box-shadow: 0px 0px 12px 2px gray;
-                height:200px;
-                background-color:white;
+                // height:200px;
+                //background-color:white;
+                border-bottom:solid #C91E00 1px;
             }
             .item-container .item-box:hover{
                 cursor:pointer;
             }
             .product-image{
-                height:200px;
+                height:100px;
                 width:100%;
             }
             .menu{

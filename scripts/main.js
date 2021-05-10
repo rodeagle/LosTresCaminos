@@ -52,9 +52,6 @@ function Responsive() {
                 <div class="text-center modal-image">
                     <img src="${item.ImgPath}"/>
                 </div>
-                <div class="text-center mt-2">
-                    <p>${item.Description}</p>
-                </div>
             </div>
         `;
         modal.Show({ body });

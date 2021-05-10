@@ -360,9 +360,13 @@ div.mobile-menu-btn {
     height: 100%;
 }
 
-.orage{
+.orange{
     color:orange;
 }
 .bolder{
     font-weight:bolder;
+}
+
+.site-main-color{
+    color:  rgb(201, 30, 0) !important;
 }
