@@ -12,20 +12,15 @@ export class Products {
                     <div class="row no-gutters p-1">
                     {{#each Items}}
                         <div class="col-md-12 item-container p-2">
-                            {{#if New}}<div class="is-new p-1 mr-2 float-right">New!</div>{{/if}}
+                            {{#if New}}<div class="is-new p-1 float-right">New!</div>{{/if}}
                             <div class="item-box row no-gutters" data-itemid="{{ID}}">
-                                <div class="col-12 text-left p-2 pl-3">
+                                <div class="col-12 text-left py-2">
                                     <h5 class="site-main-color">{{Title}}</h5>
-                                </div>
-                                <div class="col-3 p-2">
-                                    {{#if ImgPath}}
-                                    <img src="{{ImgPath}}" class="product-image"/>
-                                    {{/if}}
                                 </div>
                                 <div class="col-9 p-1 text-left">
                                     <p>{{{Description}}}</p>
                                 </div>
-                                <div class="col-12 text-right">
+                                <div class="col-3 d-flex align-items-end justify-content-end">
                                     {{#if DiscountPrice}}
                                     <div><span class="pl-1 crossed">$ {{Price}}</span>$ {{DiscountPrice}}</div>
                                     {{/if}}
