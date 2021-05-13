@@ -7,6 +7,7 @@ import K from './kickback.js';
 import { Products } from "../components/Products.min.js";
 import { Locations } from '../components/Locations.min.js';
 import css_service from "../scripts/inject-css.min.js";
+import { AddressLight } from "../components/AddressLight.min.js";
 
 
 function getUrlParameter(name) {
@@ -127,7 +128,55 @@ function init(){
     // render objects
     K.Render('#call-us-now', CallUsNowButton, data.Settings);
     K.Render('#product-list', Products, data);
-    K.Render('#locations-display',Locations,data.Settings);
+    // K.Render('#locations-display',Locations,data.Settings);
+    // set locations addresses
+    data.Settings.Phone = "<a href='tel:2178262666'>(217)-466-5824</a>";
+    K.Render('#location-paris',AddressLight,data.Settings);
+    let model = {
+        Hours : "SUN - THR 11:00AM - 9:00PM <br> FRI - SAT 11:00AM - 10:00PM"
+    };
+    // marshall
+    model.Street = "1802 IL-1";
+    model.City = "Marshall";
+    model.State = "IL";
+    model.ZipCode = "62441";
+    model.Phone = "<a href='tel:2178262666'>(217)-826-2666</a>";
+    K.Render('#location-marshall',AddressLight,model);
+    // martinsville
+    model.Street = "229 Grand Valley Blvd";
+    model.City = "Martinsville";
+    model.State = "IN";
+    model.ZipCode = "46151";
+    model.Phone = "<a href='tel:7653491502'>(765)-349-1502</a>";
+    K.Render('#location-martinsville',AddressLight,model);
+    // evansville
+    model.Street = "12100 US-41";
+    model.City = "Evansville";
+    model.State = "IN";
+    model.ZipCode = "47725";
+    model.Phone = "<a href='tel:8128688550'>(812)-868-8550</a>";
+    K.Render('#location-evansville',AddressLight,model);
+    // terraghaute
+    model.Street = "51475 US Hwy 41";
+    model.City = "Terra Haute";
+    model.State = "IN";
+    model.ZipCode = "47802";
+    model.Phone = "<a href='tel:8122980643'>(812)-298-0643</a>";
+    K.Render('#location-terrahaute',AddressLight,model);
+    // peru1
+    model.Street = "172 N Broadway";
+    model.City = "Peru";
+    model.State = "IN";
+    model.ZipCode = "46970";
+    model.Phone = "<a href='tel:7654727005'>(765)-472-7005</a>";
+    K.Render('#location-peru',AddressLight,model);
+    // peru2
+    model.Street = "913 W Main St #1740";
+    model.City = "Peru";
+    model.State = "IN";
+    model.ZipCode = "46970";
+    model.Phone = "<a href='tel:7654723711'>(765)-472-3711</a>";
+    K.Render('#location-peru2',AddressLight,model);
     // init complete 
     document.getElementById('loading').classList.add("complete");
     window.restaurant = data;

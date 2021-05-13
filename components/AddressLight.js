@@ -4,8 +4,8 @@ export class AddressLight {
         return `
             <div class="text-center">
                 {{Street}}<br>
-                {{City}} {{State}} {{Zipcode}} <br>
-                {{Phone}} <br><br> 
+                <strong>{{City}} {{State}} {{Zipcode}}</strong> <br>
+                {{{Phone}}} <br><br> 
                 {{{Hours}}}
             </div>
         `;
