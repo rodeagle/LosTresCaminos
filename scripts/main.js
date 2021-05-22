@@ -126,11 +126,11 @@ function init(){
         item["Items"] = data.Items.filter((product => product.CategoryID == item.CategoryID));
     });
     // render objects
-    K.Render('#call-us-now', CallUsNowButton, data.Settings);
+    // K.Render('#call-us-now', CallUsNowButton, data.Settings);
     K.Render('#product-list', Products, data);
     // K.Render('#locations-display',Locations,data.Settings);
     // set locations addresses
-    data.Settings.Phone = "<a href='tel:2178262666'>(217)-466-5824</a>";
+    data.Settings.Phone = "<a href='tel:2174665824'>(217)-466-5824</a>";
     K.Render('#location-paris',AddressLight,data.Settings);
     let model = {
         Hours : "SUN - THR 11:00AM - 9:00PM <br> FRI - SAT 11:00AM - 10:00PM"
@@ -177,6 +177,12 @@ function init(){
     model.ZipCode = "46970";
     model.Phone = "<a href='tel:7654723711'>(765)-472-3711</a>";
     K.Render('#location-peru2',AddressLight,model);
+    model.Street = "212 e north ave";
+    model.City = "flora";
+    model.State = "il";
+    model.ZipCode = "62839";
+    model.Phone = "<a href='tel:618623416'>618-662-3416</a>";
+    K.Render('#location-flora',AddressLight,model);
     // init complete 
     document.getElementById('loading').classList.add("complete");
     window.restaurant = data;
