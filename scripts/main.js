@@ -82,14 +82,14 @@ async function init(){
             'Content-Type': 'application/json',
         };
 
-        const data = {
+        const _data = {
             apptoken: appToken,
         };
 
         const response = await fetch(url, {
             method: 'POST',
             headers: headers,
-            body: JSON.stringify(data),
+            body: JSON.stringify(_data),
         });
 
         const result = await response.json();
