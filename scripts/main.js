@@ -9,7 +9,6 @@ import { Locations } from '../components/Locations.min.js';
 import css_service from "../scripts/inject-css.min.js";
 import { AddressLight } from "../components/AddressLight.min.js";
 
-
 function getUrlParameter(name) {
     name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
     var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
@@ -59,14 +58,45 @@ function Responsive() {
     });
 }
 
-function init(){
+async function init(){
     //// render element to div container
     //RenderDOM('address-display',Address,_location);
     //// render call us now button
     //RenderDOM('call-us-now',CallUsNowButton,_location);
-    //// render products 
+    //// render products
     //var appetizers = data.products.filter(x => _location.appetizers.includes(x.id));
     //RenderDOM('appetizer-content', Products, { items: appetizers });
+
+    if (!sessionStorage.getItem('sessionData')) {
+
+        debugger;
+
+        const response = await fetch('https://api.restaurify.com/Api/Validate?key=9281ACC1-83B7-48D6-B91D-52CBBFC0F06C'); // Replace with your API endpoint
+        const data = await response.json();
+
+        var appToken = data.appToken;
+
+        const url = 'https://api.restaurify.com/Api/GetCompanyData';
+
+        const headers = {
+            'Content-Type': 'application/json',
+        };
+
+        const data = {
+            apptoken: appToken,
+        };
+
+        const response = await fetch(url, {
+            method: 'POST',
+            headers: headers,
+            body: JSON.stringify(data),
+        });
+
+        const result = await response.json();
+
+        //sessionStorage.setItem('sessionData', result);
+
+    }
 
     // Set styles
     let style = `
