@@ -86,13 +86,13 @@ async function init(){
             apptoken: appToken,
         };
 
-        const response = await fetch(url, {
+        const _response = await fetch(url, {
             method: 'POST',
             headers: headers,
             body: JSON.stringify(_data),
         });
 
-        const result = await response.json();
+        const result = await _response.json();
 
         //sessionStorage.setItem('sessionData', result);
 
