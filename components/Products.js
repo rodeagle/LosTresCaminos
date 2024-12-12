@@ -5,7 +5,7 @@ export class Products {
         <div class="row no-gutters">
             {{#each Categories}}
                 <div class="category-item">
-                    <div class="p-4"><h1>{{Title}}</h1></div>
+                    <div class="p-4"><h1>{{Description}}</h1></div>
                     <div class="p-2">
                         {{{Header}}}
                     </div>
@@ -13,19 +13,19 @@ export class Products {
                     {{#each Items}}
                         <div class="col-md-12 item-container p-2">
                             {{#if New}}<div class="is-new p-1 float-right">New!</div>{{/if}}
-                            <div class="item-box row no-gutters" data-itemid="{{ID}}">
+                            <div class="item-box row no-gutters" data-itemid="{{ItemID}}">
                                 <div class="col-12 text-left py-2">
                                     <h5 class="site-main-color">{{Title}}</h5>
                                 </div>
                                 <div class="col-9 p-1 text-left">
-                                    <p>{{{Description}}}</p>
+                                    <p>{{{ShortDescription}}}</p>
                                 </div>
                                 <div class="col-3 d-flex align-items-end justify-content-end">
                                     {{#if DiscountPrice}}
                                     <div><span class="pl-1 crossed">$ {{Price}}</span>$ {{DiscountPrice}}</div>
                                     {{/if}}
                                     {{#unless DiscountPrice}}
-                                    {{#if Price}}<div class="pr-2"><h5>$ {{Price}}</h5></div>{{/if}}
+                                    {{#if Price}}<div class="pr-2"><h5>{{Price}}</h5></div>{{/if}}
                                     {{/unless}}
                                     <div class="icons"></div>
                                 </div>

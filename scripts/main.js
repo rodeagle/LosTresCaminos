@@ -1,13 +1,13 @@
 //import tables from "/easytables.js";
 "use strict";
 import { CallUsNowButton } from "../components/CallUsNowButton.js";
-import restaurant from "./data.min.js";
 import modal from "./modal.js";
 import K from './kickback.js';
-import { Products } from "../components/Products.min.js";
+import { Products } from "../components/Products.js";
 import { Locations } from '../components/Locations.min.js';
 import css_service from "../scripts/inject-css.min.js";
 import { AddressLight } from "../components/AddressLight.min.js";
+let restaurant = {};
 
 function getUrlParameter(name) {
     name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
@@ -45,12 +45,13 @@ function Responsive() {
     });
     $('.item-box').click(function(){
         var itemid = $(this).data('itemid');
-        var item = restaurant.data.Items.filter(x=>x.ID == itemid)[0];
+        debugger;
+        var item = restaurant.data.Items.filter(x=>x.ItemID == itemid)[0];
         var body = `
             <div class="p-1">
                 <h2 class="text-center">${item.Title}</h2>
                 <div class="text-center modal-image">
-                    <img src="${item.ImgPath}"/>
+                    <img src="${item.Images[0]?.LiteImageURL ?? "/image-not-found.png"}"/>
                 </div>
             </div>
         `;
@@ -69,8 +70,6 @@ async function init(){
 
     if (!sessionStorage.getItem('sessionData')) {
 
-        debugger;
-
         const response = await fetch('https://api.restaurify.com/Api/Validate?key=9281ACC1-83B7-48D6-B91D-52CBBFC0F06C'); // Replace with your API endpoint
         const data = await response.json();
 
@@ -79,7 +78,7 @@ async function init(){
         const url = 'https://api.restaurify.com/Api/GetCompanyData';
 
         const headers = {
-            'Content-Type': 'application/json',
+            'Content-Type': 'application/json'
         };
 
         const _data = {
@@ -94,9 +93,21 @@ async function init(){
 
         const result = await _response.json();
 
-        //sessionStorage.setItem('sessionData', result);
+        let jsObj = JSON.parse(result.data);
+        
+
+        console.log(jsObj);
+
+        sessionStorage.setItem('sessionData', result.data);
+
+        restaurant.data = jsObj;
 
     }
+    console.log(sessionStorage.getItem('sessionData'));
+    restaurant.data = JSON.parse(sessionStorage.getItem('sessionData'));
+
+    console.log("restaurnat");
+    console.log(restaurant);
 
     // Set styles
     let style = `
@@ -126,35 +137,37 @@ async function init(){
     let data = restaurant.data;
     data.Categories;
     // set the discount prices
-    data.Items.forEach((item) => {
-        let discount = data.Discounts.filter(x => x.ItemID == item.ID);
-        if (discount) {
-            switch (new Date().getDay()) {
-                case 0:
-                    discount = discount.Sunday ? discount : null; break;
-                case 1:
-                    discount = discount.Monday ? discount : null; break;
-                case 2:
-                    discount = discount.Tuesday ? discount : null; break;
-                case 3:
-                    discount = discount.Wednesday ? discount : null; break;
-                case 4:
-                    discount = discount.Thursday ? discount : null; break;
-                case 5:
-                    discount = discount.Friday ? discount : null; break;
-                case 6:
-                    discount = discount.Saturday ? discount : null; break;
-                default: discount = null;
-            }
-        }
-        if (discount) {
-            item['DiscountPrice'] = discount.DiscountPrice;
-        }
-    });
+    // data.Items.forEach((item) => {
+    //     let discount = data.Discounts.filter(x => x.ItemID == item.ID);
+    //     if (discount) {
+    //         switch (new Date().getDay()) {
+    //             case 0:
+    //                 discount = discount.Sunday ? discount : null; break;
+    //             case 1:
+    //                 discount = discount.Monday ? discount : null; break;
+    //             case 2:
+    //                 discount = discount.Tuesday ? discount : null; break;
+    //             case 3:
+    //                 discount = discount.Wednesday ? discount : null; break;
+    //             case 4:
+    //                 discount = discount.Thursday ? discount : null; break;
+    //             case 5:
+    //                 discount = discount.Friday ? discount : null; break;
+    //             case 6:
+    //                 discount = discount.Saturday ? discount : null; break;
+    //             default: discount = null;
+    //         }
+    //     }
+    //     if (discount) {
+    //         item['DiscountPrice'] = discount.DiscountPrice;
+    //     }
+    // });
     // set the items for the categories
     data.Categories.forEach((item) => {
         item["Items"] = data.Items.filter((product => product.CategoryID == item.CategoryID));
     });
+
+    data.Categories = data.Categories.filter(x => x.Items.length > 0);
     // render objects
     // K.Render('#call-us-now', CallUsNowButton, data.Settings);
     K.Render('#product-list', Products, data);
